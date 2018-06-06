@@ -24,7 +24,7 @@ var apiRoutes = express.Router();
 
 apiRoutes.get('/seller', function (req, res) {
 	res.json({
-		errno: 0,
+		errno: 0,//模拟数据errno为0
 		data: seller
 	});
 });
@@ -32,7 +32,7 @@ apiRoutes.get('/seller', function (req, res) {
 apiRoutes.get('/goods', function (req, res) {
 	res.json({
 		errno: 0,
-		data: goods
+		data: goods //返回goods
 	});
 });
 
@@ -43,7 +43,7 @@ apiRoutes.get('/ratings', function (req, res) {
 	});
 });
 
-app.use('/api', apiRoutes);
+app.use('/api', apiRoutes);//使用api
 
 var compiler = webpack(webpackConfig)
 
